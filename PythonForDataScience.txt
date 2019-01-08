@@ -1,0 +1,193 @@
+Python Data Types
+==================
+int - 666666
+float - 123.123
+str - "Hello Python 101"
+bool - True, False
+type(11) - result will be datatype
+data type casting - int('1'), int(1.0), float('1.1'), str(1.1), str(1), int(True),bool(1) 
+
+Python Expression and Variables
+================================
+mathematical operations
+10+20 (10,20 operands, + operator)
++
+-
+*
+/ - result default float value
+// -  result int value
+() - first priority
+*, / - highest priority
++, - - second priority
+variables - To store values (my_var=1)
+last value will be overide in the variable
+
+String Operations
+==================
+single quotes/double quotes for string representaion
+Name [::2]: print the odd number 0,2,4,6.....
+Name [0:5:2]: print odd number 0,2 (from first  character)
+Name [8:12]: print the character from 8th index to 11th index(11+1)
+len() - find the length of the string
++ - to concatinate the string
+* - to replicate the string multiple times (3 * "Hello")
+Name.find('el'): print the first index
+Name.replace('apple','pineapple')
+Name.upper
+
+Python Data Structures
+=======================
+Lists and Tuples
+*****************
+Lists and Tuples are Compound data types
+Ordered sequence
+Ratings=(10.9,6,5,10,8,9,6,2)
+comma separated values within paranthesis
+tuple1=('masco',10, 1.2,True)
+tuple3[0:3]
+len(tuple3)
+Tuples are immutable
+sorted(tubles3) - functions
+Tuples support nested tuples
+
+Lists
+*****
+lists are represented with square bracket
+lists are mutable
+all data types are allowed inside the list
+it supports nested list
+python supports negative index
+lists and tuples are identical except immutable
+using extend() method we can change the existing list
+convert string to list using split function
+
+
+Sets
+*****
+It is unordered and not maintain any position
+having unique elements - remove duplicates
+exset={"summer","monsoon","autumn","winter","spring","summer"}
+convert list to set use function set(list)
+in operator to check the contenet
+"A" in albumset - return True,False
+& used to union 2 sets - only intersection/common value
+union function will merge 2 sets
+
+Dictionaries
+*************
+Key value pairs
+{"key1":value1,"key2":value2,"key3":value3}
+DICTNAME["key"]
+del(DICTNAME["key"])
+in function to check the key availabilty - "key" in DICTNAME
+DICTNAME.keys() - return all keys
+DICTNAME.values - return all values
+
+Python Programming Fundamentals
+================================
+Conditions and Branching
+*************************
+comparision operator
+==,>=,<=,>,<,!=
+if(a>b):
+else:
+elif(a==b):
+logic operator: not(True),not(False), if(a>10) or (b<50), and
+
+Loops
+******
+range(3) -> [0,1,2] sequnce of numbers python2 output, range(0,3) in python3 output
+range(10,15) -> [10,11,12,13,14]
+for i in range (0,5):
+for square in squares:
+for i,square in enumerate(squares):
+while loops
+
+Functions
+**********
+python builtin functions - len, sum, sorted
+Documentation string """ add 1 to a """
+collecting arguments def collection(*names)
+global scope - variable can be accessed in anywhere 
+local scope - scope within function during execution post that variable will be deleted
+if local variable not available then the global variable value will be taken for function execution
+you can define local variable as global scope with global <variable> key name
+
+Objects And Classes
+********************
+python each is an object
+class Circle(object): here object is a parent class
+__init__ python class constructor
+dir(objectname) - print all attributes
+
+To install matplotlib
+@@@@@@@@@@@@@@@@@@@@@@
+I had to install libxft-dev in order to enable matplotlib on ubuntu server
+sudo apt-get install libfreetype6-dev libxft-dev
+sudo easy_install matplotlib
+sudo easy_install pandas
+sudo easy_install numpy
+sudo pip install xlrd
+
+Working with Data in Python
+============================
+File1=open("/resources/file1.txt","r")
+mode - r (read), w (write), a (append)
+read() - read the whole file
+readlines() - return the list
+readline() - return only one line
+readlines(16) - print 16 character, readlines(5) print next 5 character
+
+pandas - popular library for data analysis
+df.head() - print first 5 record
+read_csv() - read the csv file
+read_excel() - read the excel file
+read_fwf() - read the text file
+ 
+actor_name=df3[['Name']]
+name_rating=df3[['Name','Rating']]
+df3.ix[0,0]
+df3.ix[0,'Rating']
+df3.ix[0:2,0:3]
+df3.ix[0:2,'Name':'Rating']
+unique() - print the unique value after removing duplicate
+
+Working with Numpy Arrays
+==========================
+Numpy 1D Array
+***************
+It is array and fixed size. Array having similar datatype
+list1=[0,1,2,3,4,5,6,7,8]
+import numpy as np
+a=np.array(list1)
+a.size
+a.ndim
+a.shape
+b=a[1:4] - ouput [1,2,3]
+list1=[0,1,2,3,4,5,6,7,8]
+index= 0 1 2 3 4 5 6 7 8
+length=1 2 3 4 5 6 7 8 9
+a[3:5]=300,500
+
+numpy basic operations
+    vector addition and substraction
+    u=[1,5],v=[4,1] z=u+v=[5,6]
+    u-v
+    u*2
+    product of two numpy arrays
+    u dot v        T
+    dot product - u v - 1*4+5*1=9
+    np.dot(u,v)
+    Broadcasting - u+1 - adding 1 with each element in numpy array
+    universal Functions
+    --------------------
+    a.mean()
+    a.max()
+    sin()
+    np.linspace(-2,2,num=5) - -2,-1,0,1,2 (total 5 values)
+    
+    Numpy 2D Arrays
+    ----------------
+    a=[[11,12,13],[21,22,23],[31,32,33]]
+    np.array(a)
+    
